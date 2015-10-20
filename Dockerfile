@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Thanh Ha <thanh.ha@alumni.carleton.ca>
+MAINTAINER Thanh Ha <zxiiro@linux.com>
 
 RUN apt-get update && apt-get install -y \
   python-setuptools \
