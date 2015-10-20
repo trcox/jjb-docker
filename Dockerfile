@@ -8,11 +8,7 @@ RUN apt-get update && apt-get install -y \
   git
 
 RUN easy_install pip
-RUN pip install PyYAML
-RUN pip install pbr
-
-RUN git clone https://github.com/openstack-infra/jenkins-job-builder.git
-RUN cd jenkins-job-builder && python setup.py install
+RUN pip install jenkins-job-builder
 
 VOLUME = ["/jjb"]
 WORKDIR /jjb
