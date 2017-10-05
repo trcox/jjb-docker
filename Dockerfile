@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-MAINTAINER Thanh Ha <zxiiro@linux.com>
+MAINTAINER Tyler Cox <tyler_cox@dell.com>
 
 RUN apt-get update && apt-get install -y \
   python-setuptools \
@@ -8,7 +8,8 @@ RUN apt-get update && apt-get install -y \
   git
 
 RUN easy_install pip
-RUN pip install jenkins-job-builder
+# Install directly from github source repository master
+RUN pip install git+https://github.com/openstack-infra/jenkins-job-builder.git
 
 VOLUME = ["/jjb"]
 WORKDIR /jjb
